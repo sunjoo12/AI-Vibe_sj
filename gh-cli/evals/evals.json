@@ -1,0 +1,41 @@
+{
+  "skill_name": "gh-cli",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "우리 팀 저장소에서 내가 리뷰어로 지정된 PR 목록을 보고 싶어. 각 PR의 번호, 제목, 작성자도 같이 보여줘.",
+      "expected_output": "gh pr list 명령어와 적절한 필터(--reviewer @me), --json 플래그로 number/title/author 필드를 출력하는 명령어를 제시하고 실행한다.",
+      "files": [],
+      "assertions": [
+        "gh pr list 명령어를 사용한다",
+        "--reviewer \"@me\" 또는 동등한 필터를 포함한다",
+        "number, title, author 필드를 JSON 또는 표 형식으로 출력한다",
+        "명령어 실행 전 gh auth status로 인증 상태를 확인하거나 안내한다"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "방금 v1.5.0 태그를 push했어. 이 태그로 GitHub Release를 만들고 싶은데, dist 폴더 안에 있는 모든 .zip 파일을 assets로 첨부해줘. 릴리즈 노트는 자동으로 생성해줘.",
+      "expected_output": "git tag 확인 후 gh release create v1.5.0 --generate-notes와 dist/*.zip 파일 첨부 명령어를 제시하고 실행한다.",
+      "files": [],
+      "assertions": [
+        "gh release create v1.5.0 명령어를 사용한다",
+        "--generate-notes 플래그를 포함한다",
+        "dist/*.zip 또는 동등한 glob 패턴으로 자산을 첨부한다",
+        "릴리즈 생성 전 사용자에게 확인을 구하거나 명령어를 먼저 보여준다"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "main 브랜치에서 방금 돌아간 GitHub Actions 워크플로우가 실패했어. 어떤 job이 실패했는지 보고 싶고, 실패한 job만 다시 실행하고 싶어.",
+      "expected_output": "gh run list로 최근 실행 확인, gh run view로 실패한 job 파악, gh run rerun --failed-only로 재실행하는 단계별 명령어를 제시한다.",
+      "files": [],
+      "assertions": [
+        "gh run list 명령어로 최근 실행 목록을 확인한다",
+        "gh run view로 실패한 job 상세 정보를 보는 방법을 안내한다",
+        "gh run rerun --failed-only 명령어를 포함한다",
+        "run ID를 특정하거나 어떻게 확인하는지 안내한다"
+      ]
+    }
+  ]
+}
