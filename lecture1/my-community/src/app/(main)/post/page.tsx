@@ -73,7 +73,8 @@ function PostDetail() {
     mutationFn: async () => {
       const supabase = createClient();
       if (post?.image_url) {
-        const path = post.image_url.split('/post-images/')[1];
+        const match = post.image_url.match(/\/post-images\/(.+)$/);
+        const path = match?.[1];
         if (path) await supabase.storage.from('post-images').remove([path]);
       }
       const { error } = await supabase.from('posts').delete().eq('id', id!);

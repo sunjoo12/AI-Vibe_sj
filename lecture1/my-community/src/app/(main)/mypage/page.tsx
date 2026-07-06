@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { useQuery } from '@tanstack/react-query';
-import { Camera, Settings } from 'lucide-react';
+import { Settings } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
@@ -44,14 +44,21 @@ export default function MyPage() {
     enabled: !!user,
     queryFn: async () => {
       const supabase = createClient();
-      const { data } = await supabase
+      const { data: likesData } = await supabase
         .from('likes')
-        .select('post_id, posts_with_counts!post_id(*)')
+        .select('post_id')
         .eq('user_id', user!.id)
         .order('created_at', { ascending: false });
-      return (data ?? [])
-        .map((d: { posts_with_counts: unknown }) => d.posts_with_counts as PostWithCounts)
-        .filter(Boolean) as PostWithCounts[];
+
+      if (!likesData || likesData.length === 0) return [];
+
+      const postIds = likesData.map((l: { post_id: string }) => l.post_id);
+      const { data } = await supabase
+        .from('posts_with_counts')
+        .select('*')
+        .in('id', postIds);
+
+      return (data ?? []) as PostWithCounts[];
     },
   });
 

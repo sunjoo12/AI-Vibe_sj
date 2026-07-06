@@ -22,9 +22,8 @@ export default function PostCard({ post, likedPostIds }: PostCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.35, ease: 'easeOut' }}
       whileHover={{ y: -4, scale: 1.03 }}
-      style={{ transition: 'box-shadow 300ms ease' }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
     >
       <Link href={`/post?id=${post.id}`} className='block focus:outline-none focus:ring-2 focus:ring-[#96B5B8] rounded-[20px]'>
         <article
