@@ -5,8 +5,8 @@ import Grid from '@mui/material/Grid';
 import TimelineItem from '../ui/TimelineItem';
 
 const EDUCATION = [
-  { label: '한빛 디자인 아카데미', period: '2019 - 2021' },
-  { label: '서울 정보예술대학교', period: '2015 - 2019' },
+  { label: 'SBS 아카데미', period: '2025 - 2026' },
+  { label: '대림대학교 경영학과', period: '2014 - 2017' },
 ];
 
 const CAREER = [
