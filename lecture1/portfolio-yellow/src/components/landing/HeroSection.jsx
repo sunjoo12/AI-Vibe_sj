@@ -37,13 +37,13 @@ function HeroSection() {
           }}
         >
           <Typography sx={{ fontSize: { xs: '0.75rem', md: '1rem' }, fontWeight: 700, letterSpacing: '1.5px', color: 'text.primary' }}>
-            HONG DA-IN
+            PARK SEON-JU
           </Typography>
           <Typography sx={{ fontSize: { xs: '0.75rem', md: '1rem' }, fontWeight: 700, letterSpacing: '1.5px', color: 'text.secondary' }}>
-            2023 - 2026
+            2025 - 2026
           </Typography>
           <Typography sx={{ fontSize: { xs: '0.75rem', md: '1rem' }, fontWeight: 700, letterSpacing: '1.5px', color: 'text.primary' }}>
-            FRONTEND DEVELOPER
+            WEB DESIGNER
           </Typography>
         </Box>
 

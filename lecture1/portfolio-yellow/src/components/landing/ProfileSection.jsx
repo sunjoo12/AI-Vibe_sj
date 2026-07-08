@@ -64,7 +64,7 @@ function ProfileSection() {
                     userSelect: 'none',
                   }}
                 >
-                  DI
+                  SJ
                 </Typography>
               </Box>
             </Box>
@@ -80,7 +80,7 @@ function ProfileSection() {
                 mb: 2,
               }}
             >
-              홍다인 HONG DA-IN
+              박선주 PARK SEON-JU
             </Typography>
             <Box
               sx={{
@@ -104,7 +104,7 @@ function ProfileSection() {
               }}
             >
               안녕하세요, 따뜻한 색감과 명확한 사용자 경험을 좋아하는 프론트엔드
-              개발자 홍다인입니다. React와 MUI를 중심으로 디자인 시스템을
+              개발자 박선주입니다. React와 MUI를 중심으로 디자인 시스템을
               구축하고, 브랜드의 개성을 웹 화면에 담아내는 작업을 즐깁니다.
               아래에서 학력, 경력, 사용 툴과 작업물을 확인하실 수 있습니다.
             </Typography>

@@ -33,13 +33,13 @@ function ContactSection() {
           함께 일하고 싶으신가요?
         </Typography>
         <Typography sx={{ fontSize: '0.9375rem', color: 'text.primary', mb: 4 }}>
-          hongdain.dev@example.com
+          sunjoo1993@gmail.com
         </Typography>
         <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
           <Button
             variant="contained"
             color="secondary"
-            href="mailto:hongdain.dev@example.com"
+            href="mailto:sunjoo1993@gmail.com"
             sx={{ px: 4 }}
           >
             이메일 보내기
