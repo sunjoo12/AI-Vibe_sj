@@ -37,7 +37,7 @@ function HeroSection() {
           }}
         >
           <Typography sx={{ fontSize: { xs: '0.75rem', md: '1rem' }, fontWeight: 700, letterSpacing: '1.5px', color: 'text.primary' }}>
-            PARK SEON-JU
+            Park sunju
           </Typography>
           <Typography sx={{ fontSize: { xs: '0.75rem', md: '1rem' }, fontWeight: 700, letterSpacing: '1.5px', color: 'text.secondary' }}>
             2025 - 2026

@@ -80,7 +80,7 @@ function ProfileSection() {
                 mb: 2,
               }}
             >
-              박선주 PARK SEON-JU
+              박선주 Park sunju
             </Typography>
             <Box
               sx={{
@@ -93,7 +93,7 @@ function ProfileSection() {
                 borderColor: 'divider',
               }}
             >
-              1998.03.14
+              1993.12.21
             </Box>
             <Typography
               sx={{
